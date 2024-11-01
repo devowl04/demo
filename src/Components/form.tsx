@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 
 export default function Form() {
-  const [state, setState] = useState({
+  interface IState {
+    name: string;
+    email: string;
+    subscriptionFre: string;
+    option: string;
+  }
+
+  const [state, setState] = useState<IState>({
     name: '',
     email: '',
     subscriptionFre: '',
